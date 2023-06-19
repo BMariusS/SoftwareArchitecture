@@ -18,7 +18,7 @@ namespace CleanArc.Application.Commands.UserCommands
             RuleFor(x => x.User.Email).Must(BeUniqueEmail).WithMessage(string.Format(i18nService.GetMessage(ErrorMessagesNames.INVALID_EMAIL_ADDRESS), "Email"));
             RuleFor(x => x.User.Username).Must(BeNotNullOrEmptyString).WithMessage(string.Format(i18nService.GetMessage(ErrorMessagesNames.STRING_CANNOT_BENULL_OR_EMPTY), "Username"));
             RuleFor(x => x.User.Username).Must(BeUniqueUsername).WithMessage(string.Format(i18nService.GetMessage(ErrorMessagesNames.DUPLICATE_ENTITY), "Username"));
-            RuleFor(x => x.User.Password).MinimumLength(8).WithMessage(string.Format(i18nService.GetMessage(ErrorMessagesNames.PASSWORD_TOO_SHORT)));
+            RuleFor(x => x.User.Password).MinimumLength(8).WithMessage(string.Format(i18nService.GetMessage(ErrorMessagesNames. PASSWORD_TOO_SHORT)));
             RuleFor(x => x.User.Password).Must(t => t.MatchPasswordComplexity()).WithMessage(string.Format(i18nService.GetMessage(ErrorMessagesNames.PASSWORD_DOES_NOT_MATCH_COMPLEXITY)));
         }
 

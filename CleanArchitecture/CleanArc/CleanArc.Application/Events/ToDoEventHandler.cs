@@ -2,7 +2,8 @@
 using CleanArc.Domain.Events;
 using System.Threading;
 using System.Threading.Tasks;
-using CleanArc.Application.Services;
+using CleanArc.Application.Common;
+using CleanArc.Application.Interfaces;
 
 namespace CleanArc.Application.Events
 {
@@ -22,6 +23,7 @@ namespace CleanArc.Application.Events
         public async Task Handle(ToDoAdded todoAdded, CancellationToken cancellationToken)
         {
             // handle the event here
+            await _notificationService.NotifyAsync(ApplicationConstants.ADDED_EVENT_MESSAGE);
         }
     }
 }
