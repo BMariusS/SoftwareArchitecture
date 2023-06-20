@@ -1,13 +1,11 @@
-﻿using CleanArc.Common;
-using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net.Http;
+﻿using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
+using CleanArc.Application.Interfaces;
+using CleanArc.Common;
+using Newtonsoft.Json;
 
-namespace CleanArc.Application.Services
+namespace CleanArc.Infrastructure.Services
 {
     [MapServiceDependency(nameof(INotificationService))]
     public class NotificationService : INotificationService

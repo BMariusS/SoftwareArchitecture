@@ -125,6 +125,9 @@
     <value>This {0} already exists in the database.</value>
     <comment>{0} - Entity name;</comment>
   </data>
+  <data name="DuplicateImportantErrorMessage" xml:space="preserve">
+    <value>There is already an IMPORTANT note to be resolved, please resolve that one before adding a new one</value>
+  </data>
   <data name="EqualErrorMessage" xml:space="preserve">
     <value>The value of the {0} should be equal to {1}</value>
     <comment>{0} - Property name; {1} - Equal value</comment>
